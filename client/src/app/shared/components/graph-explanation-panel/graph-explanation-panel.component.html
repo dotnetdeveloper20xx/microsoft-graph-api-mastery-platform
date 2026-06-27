@@ -1,0 +1,50 @@
+<div class="graph-panel">
+  <button
+    class="panel-header"
+    type="button"
+    (click)="toggle()"
+    [attr.aria-expanded]="expanded()"
+    aria-controls="graph-panel-content"
+  >
+    <span class="panel-icon" aria-hidden="true">📘</span>
+    <span class="panel-title">Graph API Integration Details</span>
+    <span class="panel-toggle" aria-hidden="true">{{ expanded() ? '▲' : '▼' }}</span>
+  </button>
+
+  @if (expanded()) {
+    <div id="graph-panel-content" class="panel-content" role="region" aria-label="Graph API details">
+      @if (panelData().endpoints.length > 0) {
+        <section class="panel-section">
+          <h4 class="section-title">Endpoints</h4>
+          <ul class="section-list">
+            @for (endpoint of panelData().endpoints; track endpoint) {
+              <li class="endpoint-item"><code>{{ endpoint }}</code></li>
+            }
+          </ul>
+        </section>
+      }
+
+      @if (panelData().scopes.length > 0) {
+        <section class="panel-section">
+          <h4 class="section-title">Permission Scopes</h4>
+          <ul class="section-list tags">
+            @for (scope of panelData().scopes; track scope) {
+              <li class="scope-tag">{{ scope }}</li>
+            }
+          </ul>
+        </section>
+      }
+
+      @if (panelData().descriptions.length > 0) {
+        <section class="panel-section">
+          <h4 class="section-title">Capabilities</h4>
+          <ul class="section-list">
+            @for (desc of panelData().descriptions; track desc) {
+              <li class="description-item">{{ desc }}</li>
+            }
+          </ul>
+        </section>
+      }
+    </div>
+  }
+</div>

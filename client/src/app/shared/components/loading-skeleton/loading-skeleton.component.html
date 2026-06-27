@@ -1,0 +1,6 @@
+<div class="skeleton-container" role="status" aria-label="Loading content">
+  @for (line of skeletonLines(); track $index) {
+    <div class="skeleton-line" [style.width]="line.width"></div>
+  }
+  <span class="visually-hidden">Loading...</span>
+</div>

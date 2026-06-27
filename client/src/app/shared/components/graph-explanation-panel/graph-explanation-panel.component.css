@@ -1,0 +1,114 @@
+.graph-panel {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px 0;
+  background: #fafafa;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  transition: background-color 0.2s;
+}
+
+.panel-header:hover {
+  background-color: #f0f0f0;
+}
+
+.panel-header:focus-visible {
+  outline: 2px solid #1976d2;
+  outline-offset: -2px;
+}
+
+.panel-icon {
+  font-size: 1.2rem;
+}
+
+.panel-title {
+  flex: 1;
+  text-align: left;
+}
+
+.panel-toggle {
+  font-size: 0.75rem;
+  color: #888;
+}
+
+.panel-content {
+  padding: 0 16px 16px;
+  animation: slideDown 0.2s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.panel-section {
+  margin-top: 12px;
+}
+
+.section-title {
+  margin: 0 0 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555;
+}
+
+.section-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.section-list.tags {
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.endpoint-item code {
+  font-size: 0.8rem;
+  background: #e8eaf6;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #283593;
+}
+
+.scope-tag {
+  font-size: 0.75rem;
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.description-item {
+  font-size: 0.8rem;
+  color: #555;
+  line-height: 1.4;
+  padding-left: 12px;
+  border-left: 2px solid #e0e0e0;
+}

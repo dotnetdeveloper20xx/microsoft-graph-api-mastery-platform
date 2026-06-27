@@ -1,0 +1,8 @@
+<div class="error-state" role="alert">
+  <div class="error-icon" aria-hidden="true">{{ errorIcon() }}</div>
+  <h3 class="error-title">{{ errorTitle() }}</h3>
+  <p class="error-message">{{ displayMessage() }}</p>
+  <button class="retry-button" (click)="onRetry()" type="button">
+    Retry
+  </button>
+</div>

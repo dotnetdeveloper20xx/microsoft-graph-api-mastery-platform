@@ -1,0 +1,32 @@
+<div class="layout" [class.sidebar-collapsed]="sidebarCollapsed()">
+  <!-- Top Bar -->
+  <header class="topbar">
+    <button class="topbar__toggle" (click)="toggleSidebar()" aria-label="Toggle sidebar">
+      ☰
+    </button>
+    <h1 class="topbar__title">GraphBridge Enterprise Suite</h1>
+  </header>
+
+  <!-- Sidebar -->
+  <nav class="sidebar" aria-label="Main navigation">
+    <ul class="sidebar__nav">
+      @for (item of navItems; track item.path) {
+        <li class="sidebar__item">
+          <a
+            [routerLink]="item.path"
+            routerLinkActive="sidebar__link--active"
+            class="sidebar__link"
+          >
+            <span class="sidebar__icon">{{ item.icon }}</span>
+            <span class="sidebar__label">{{ item.label }}</span>
+          </a>
+        </li>
+      }
+    </ul>
+  </nav>
+
+  <!-- Content Area -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+</div>
