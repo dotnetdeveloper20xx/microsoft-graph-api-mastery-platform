@@ -231,7 +231,7 @@ The platform starts in **Demo Mode** by default — realistic named business dat
 
 ## 👤 About Me
 
-I'm a .NET developer who builds enterprise-grade systems. This project exists because I wanted to demonstrate — concretely, with working code — that I understand how to architect, implement, and test complex Microsoft 365 integrations at a level that goes far beyond basic API calls.
+I'm a .NET developer who builds enterprise-grade systems. This project exists because I wanted to demonstrate — concretely, with working code — that I understand how to architect, implement, and test complex Microsoft 365 integrations at a level that goes far beyond basic API calls. https://dotnetdeveloper.co.uk
 
 If you're reviewing this code, you're looking at how I think about software: layered, testable, production-aware, and built to handle the messy reality of distributed service integration.
 
